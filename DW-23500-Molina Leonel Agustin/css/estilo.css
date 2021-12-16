@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #E9ECF4;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', san serif;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "header header header"
+                         "contenido contenido imagenes"
+                         "widget-1 widget-2 widget-3"
+                         "footer footer footer";
+}
+.contenedor div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .imagenes,
+.contenedor .footer{
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header{
+    background: #9c1717;
+    color: white;
+    grid-area: header;
+    text-align: center;
+
+
+    /*grid-column-start: 1;
+    grid-column-end: -1;*/
+}
+
+.contenedor .contenido{
+    grid-area: contenido;
+
+    /*grid-column: span 2;*/
+}
+
+.contenedor .imagenes{
+    grid-column: 3 / 4;
+    background: #a1a0a0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-area: imagenes;
+
+    /*grid-row: span 2;*/
+}
+
+img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2,
+.contenedor .widget-3{
+    background: #a1a0a0;
+    color: white;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .widget-1:hover{
+    grid-area: widget-1;
+    background: rgb(126, 126, 126);
+    transform: translateY(-15px);
+    box-shadow: 0.12px 16px rgb(126, 126, 126);
+    filter: opacity(.5);
+}
+
+.contenedor .widget-2:hover{
+    grid-area: widget-2;
+    background: rgb(126, 126, 126);
+    transform: translateY(-15px);
+    box-shadow: 0.12px 16px rgb(126, 126, 126);
+    filter: opacity(.5);
+}
+
+.contenedor .widget-3:hover{
+    grid-area: widget-3;
+    background: rgb(126, 126, 126);
+    transform: translateY(-15px);
+    box-shadow: 0.12px 16px rgb(126, 126, 126);
+    filter: opacity(.5);
+}
+
+
+.contenedor .footer{
+    background: #12203E;
+    color: white;
+    grid-area: footer;
+
+    /*grid-column: span 3;*/
+
+}
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas: "header header header"
+                         "contenido contenido imagenes"
+                         "widget-1 widget-2 widget-3 "
+                         "footer footer footer";
+    }
+    
+}
+
+.contenedores{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    grid-template-areas: "headers headers headers"
+                         "texto texto texto"
+                         "widget-1 widget-2 widget-3";
+}
+
+.contenedores div,
+.contenedores .headers,
+.contenedores .texto{
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedores .headers{
+    background: #a1a0a0;
+    color: white;
+    grid-area: headers;
+    text-align: center;
+}
+
+.contenedores .texto{
+    grid-area: texto;
+}
+
+.contenedores img{
+    max-height: 700px;
+    max-width: 400px;
+}
+
+.contenedores .widget-1,
+.contenedores .widget-2,
+.contenedores .widget-3{
+    background: #a1a0a0;
+    color: white;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.2px 2px rgb(0, 0, 0);
+    overflow: hidden;
+    transition: all 0.25;
+}
+
+
+.contenedores .widget-1:hover{
+    grid-area: widget-1;
+    background: rgb(126, 126, 126);
+    transform: translateY(-15px);
+    box-shadow: 0.12px 16px rgb(126, 126, 126);
+    filter: opacity(.5);
+}
+
+.contenedores .widget-2:hover{
+    grid-area: widget-2;
+    background: rgb(126, 126, 126);
+    transform: translateY(-15px);
+    box-shadow: 0.12px 16px rgb(126, 126, 126);
+    filter: opacity(.5);
+}
+
+.contenedores .widget-3:hover{
+    grid-area: widget-3;
+    background: rgb(126, 126, 126);
+    transform: translateY(-15px);
+    box-shadow: 0.12px 16px rgb(126, 126, 126);
+    filter: opacity(.5);
+}
+
